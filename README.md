@@ -1,4 +1,4 @@
-<p align="center"><img src="shell_midsurface.png#gh-light-mode-only" width="800"\></p>
+<p align="center"><img src="shell_midsurface.png#gh-light-mode-only" width="600"\></p>
 
 # Physics-Informed Shell Structures
 
