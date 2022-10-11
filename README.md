@@ -1,3 +1,5 @@
+<p align="center"><img src="shell_midsurface.png" width="800"\></p>
+
 # Physics-Informed Shell Structures
 
 We introduce a framework to simulate the mechanical small-strain response of shell structures via PINNs.
