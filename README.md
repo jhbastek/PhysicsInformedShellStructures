@@ -16,7 +16,7 @@ The required packages are fairly basic. Though we do not foresee any compatibili
 
 - Python (tested on version 3.7.1)
 - Python packages:
-  - Pytorch (verified on version 1.11.0 with CUDA version 11.7)
+  - Pytorch (1.11.0 with CUDA version 11.7)
   - NumPy (1.19.2)
   - SciPy (1.5.2)
   - Matplotlib (3.3.2, only required for plotting)
