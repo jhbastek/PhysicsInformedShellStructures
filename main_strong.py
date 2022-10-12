@@ -49,10 +49,10 @@ if __name__ == '__main__':
     # activate to plot predictions and compare to FEM
     plot = True
 
-    # Sample collocation points according to col_sampling
+    # sample collocation points according to col_sampling
     xi_col_temp = get_col_sampling(col_sampling, N_col)
 
-    # Transform to reference domain (warning: if reference domain changed, BCs must be adjusted accordingly)
+    # transform to reference domain (warning: if reference domain changed, BCs must be adjusted accordingly)
     if col_sampling != 'concentric':
         xi_col = xi_col_temp * 1. - 0.5
     # activate gradient tracking for geometric measures
@@ -199,7 +199,7 @@ if __name__ == '__main__':
 
     exportList('loss_history/loss_strong_form', loss_strong_form)
     exportList('loss_history/L2_error_strong_form', L2_error_list)
-    torch.save(pn,'models/pn_strong_form.pt')
+    torch.save(pn,'models/pn.pt')
 
     if plot:
         grid_eval_pinn(geometry)
