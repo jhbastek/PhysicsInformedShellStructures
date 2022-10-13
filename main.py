@@ -12,7 +12,6 @@ if __name__ == '__main__':
     
     # select study: ['hyperb_parab', 'scordelis_lo', 'hemisphere']
     study = 'hyperb_parab'
-    study = 'scordelis_lo_small_t_study'
 
     # to reproduce results from paper
     fix_seeds()
