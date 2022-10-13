@@ -15,7 +15,7 @@ For further information, please first refer to [TBD], or reach out to [Jan-Hendr
 
 ## Requirements
 
-The requirements are fairly basic. Though we do not foresee any compatibility issues, we provide each version that was verified to work correctly.
+The requirements are fairly standard. Though we do not foresee any compatibility issues, we provide each version that was verified to work correctly.
 
 - Python (tested on version 3.7.1)
 - Python packages:
