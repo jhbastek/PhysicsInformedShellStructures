@@ -4,6 +4,7 @@ def create_param_dict(study):
         param_dict = {
             'geometry': 'hyperb_parab', 
             'loading': 'gravity',
+            'loading_factor': 1.,
             'E': 1.,
             'thickness': 0.1,
             'shell_density': 1.,
@@ -21,6 +22,7 @@ def create_param_dict(study):
         param_dict = {
             'geometry': 'hyperb_parab', 
             'loading': 'gravity',
+            'loading_factor': 1.,
             'E': 1.,
             'thickness': 0.1,
             'shell_density': 1.,
@@ -39,6 +41,7 @@ def create_param_dict(study):
         param_dict = {
             'geometry': 'scordelis_lo', 
             'loading': 'gravity',
+            'loading_factor': 0.005, # should be equal to thickness to ensure convergence
             'E': 1.,
             'thickness': 0.005,
             'shell_density': 1.,
@@ -51,11 +54,30 @@ def create_param_dict(study):
             'opt_switch_epoch': 0,
             'FEM_sol_dir': 'FEM_sol/fenics_pred_scordelis_lo.csv',
             }
+    # Scordelis-Lo roof thin-thickness study (weak form)
+    elif study == 'scordelis_lo_small_t_study':
+        param_dict = {
+            'geometry': 'scordelis_lo', 
+            'loading': 'gravity',
+            'loading_factor': 0.001, # should be equal to thickness to ensure convergence
+            'E': 1.,
+            'thickness': 0.001,
+            'shell_density': 1.,
+            'nu': 0.0,
+            'shear_factor': 5./6.,
+            'bcs': 'scordelis_lo',
+            'N_col': 2**16,
+            'col_sampling': 'sobol',
+            'epochs': 1000,
+            'opt_switch_epoch': 0,
+            'FEM_sol_dir': 'FEM_sol/scordelis_thickness_study/fenics_pred_scordelis_lo_0001.csv',
+            }
     # hemisphere under concentrated load (weak form)
     elif study == 'hemisphere':
         param_dict = {
             'geometry': 'hemisphere', 
             'loading': 'concentrated_load',
+            'loading_factor': 1.,
             'E': 1.,
             'thickness': 0.05,
             'shell_density': 1.,

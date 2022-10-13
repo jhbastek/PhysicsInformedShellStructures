@@ -12,6 +12,7 @@ if __name__ == '__main__':
     
     # select study: ['hyperb_parab', 'scordelis_lo', 'hemisphere']
     study = 'hyperb_parab'
+    study = 'scordelis_lo_small_t_study'
 
     # to reproduce results from paper
     fix_seeds()
@@ -28,6 +29,7 @@ if __name__ == '__main__':
     param_dict = create_param_dict(study)
     geometry = param_dict['geometry']
     loading = param_dict['loading']
+    loading_factor = param_dict['loading_factor']
     E = param_dict['E']
     thickness = param_dict['thickness']
     shell_density = param_dict['shell_density']
@@ -41,7 +43,7 @@ if __name__ == '__main__':
     FEM_sol_dir = param_dict['FEM_sol_dir']
 
     # frequency of L2 error evaluation (takes some time)
-    l2_eval_freq = 10
+    l2_eval_freq = 1
     
     # activate to print out losses
     verbose = True
@@ -119,9 +121,9 @@ if __name__ == '__main__':
         shear_energy = 0.5 * shear_factor * thickness * bdot(shear_strains,bmv(D,shear_strains))
         # assemble external work
         if loading == 'gravity':
-            W_ext = -1. * pn(xi_col)[:,2] * thickness * shell_density
+            W_ext = -1. * pn(xi_col)[:,2] * thickness * shell_density * loading_factor
         elif loading == 'concentrated_load':
-            W_ext = -1. * pn(xi_col)[:,2] * torch.exp(-(torch.pow(xi_col[:,0], 2) + torch.pow(xi_col[:,1], 2)) / 0.1)
+            W_ext = -1. * pn(xi_col)[:,2] * torch.exp(-(torch.pow(xi_col[:,0], 2) + torch.pow(xi_col[:,1], 2)) / 0.1) * loading_factor
         elif loading == 'none':
             W_ext = torch.zeros(batch_len,device=device)
         else:

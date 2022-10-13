@@ -28,6 +28,7 @@ if __name__ == '__main__':
     param_dict = create_param_dict(study)
     geometry = param_dict['geometry']
     loading = param_dict['loading']
+    loading_factor = param_dict['loading_factor']
     E = param_dict['E']
     thickness = param_dict['thickness']
     shell_density = param_dict['shell_density']
@@ -152,7 +153,7 @@ if __name__ == '__main__':
         # external force (transform from physical to curvilinear)
         if loading == 'gravity':
             f_phys = torch.zeros(N_col,5,device=device)
-            f_phys[:,2] = -1. * shell_density * thickness
+            f_phys[:,2] = -1. * shell_density * thickness * loading_factor
             f_local = bmv(S,f_phys)
         else:
             raise ValueError('Loading type not recognized.')
