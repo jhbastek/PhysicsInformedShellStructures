@@ -26,4 +26,4 @@ The requirements are fairly basic. Though we do not foresee any compatibility is
 
 ## Citation
 
-TBD
+If you use this code, please cite the following publication: TBD
