@@ -3,7 +3,7 @@
 
 # Physics-Informed Neural Networks for Shell Structures
 
-We introduce a framework to simulate the mechanical small-strain response of shell structures via PINNs.
+We introduce a framework to simulate the mechanical small-strain response of shell structures via PINNs as described in ['Physics-Informed Neural Networks for shell structures'](https://doi.org/10.1016/j.euromechsol.2022.104849).
 
 To run the studies, simply clone this repository via
 ```
@@ -11,7 +11,7 @@ git clone https://github.com/jhbastek/PhysicsInformedShellStructures.git
 ```
 and run **main.py** with the indicated study. For the strong form, simply run **main_strong.py**. You may choose your own setting by providing the corresponding values in **params.py**. To consider different surfaces, simply add the corresponding charts in similar style as the given charts to **src.geometry.py**. 
 
-For further information, please first refer to [TBD], or reach out to [Jan-Hendrik Bastek](mailto:jbastek@ethz.ch).
+For further information, please first refer to the [paper](https://doi.org/10.1016/j.euromechsol.2022.104849), or reach out to [Jan-Hendrik Bastek](mailto:jbastek@ethz.ch).
 
 ## Requirements
 
