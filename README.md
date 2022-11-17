@@ -27,3 +27,17 @@ The requirements are fairly basic. Though we do not foresee any compatibility is
 ## Citation
 
 If this code is useful for your research, please cite our [publication](https://doi.org/10.1016/j.euromechsol.2022.104849).
+```bibtex
+@article{Bastek2023,
+author = {Bastek, Jan-Hendrik and Kochmann, Dennis M.},
+doi = {10.1016/j.euromechsol.2022.104849},
+issn = {09977538},
+journal = {European Journal of Mechanics - A/Solids},
+month = {jan},
+pages = {104849},
+title = {{Physics-Informed Neural Networks for shell structures}},
+url = {https://linkinghub.elsevier.com/retrieve/pii/S0997753822002790},
+volume = {97},
+year = {2023}
+}
+```
