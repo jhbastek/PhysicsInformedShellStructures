@@ -9,7 +9,7 @@ To run the studies, simply clone this repository via
 ```
 git clone https://github.com/jhbastek/PhysicsInformedShellStructures.git
 ```
-and run **main.py** with the indicated study. For the strong form, simply run **main_strong.py**. You may choose your own setting by providing the corresponding values in **params.py**. To consider different surfaces, simply add the corresponding charts in similar style as the given charts to **src.geometry.py**. 
+and run `main.py` with the indicated study. For the strong form, simply run `main_strong.py`. You may choose your own setting by providing the corresponding values in `params.py`. To consider different surfaces, simply add the corresponding charts in similar style as the given charts to `src.geometry.py`. 
 
 For further information, please first refer to the [publication](https://doi.org/10.1016/j.euromechsol.2022.104849), or reach out to [Jan-Hendrik Bastek](mailto:jbastek@ethz.ch).
 
